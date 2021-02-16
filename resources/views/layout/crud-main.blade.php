@@ -13,8 +13,10 @@
     <h1 class="text-center">@yield("header-title")</h1>
   </header>
 
-  <main>
-    @yield("main-content")
+  <main class="p-5 mb-5">
+    <div class="container">
+      @yield("main-content")
+    </div>
   </main>
 
   <footer>
