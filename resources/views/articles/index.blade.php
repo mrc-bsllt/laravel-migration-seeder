@@ -18,8 +18,11 @@
       @foreach ($articles as $article)
         <tr>
           @foreach ($article->toArray() as $key => $value)
-            <td>{{ $key != "blog_content" ? $value : substr($value, 0, 30)."..." }}</td>
+            <td>{{ ($key != "blog_content") && ($key != "subtitle") ? $value : substr($value, 0, 30)."..." }}</td>
           @endforeach
+          <td><a class="btn btn-primary" href="#"><i class="fas fa-eye"></i></a></td>
+          <td><a class="btn btn-primary" href="#"><i class="fas fa-pencil-alt"></i></a></td>
+          <td></td>
         </tr>
       @endforeach
     </tbody>
